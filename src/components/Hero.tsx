@@ -1,6 +1,5 @@
 import React from "react";
 import mealsImage from "../assets/meals.jpg";
-
 import "./Hero.css";
 
 const Hero: React.FC = () => {

@@ -1,0 +1,135 @@
+:root{
+    --brand: #7a2508;         /* marrone header/bottoni */
+    --brand-dark: #5a1704;
+    --card: #ffffff;
+    --border: rgba(0,0,0,.08);
+    --text: #222;
+    --muted: #6b6b6b;
+  }
+  
+  /* sezione sotto l’hero */
+  .meals{
+    padding: 2.25rem 1rem 4rem;
+    background: var(--page-bg, #2b2b2b); /* usa lo stesso bg della pagina */
+  }
+  
+  /* card centrale */
+  .meals__card{
+    max-width: 45rem;                 /* larghezza come nello screenshot */
+    margin: 0 auto;
+    background: var(--card);
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  
+  /* riga singolo pasto */
+  .meal{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .meal:last-child{
+    border-bottom: 0;
+  }
+  
+  /* sinistra */
+  .meal__title{
+    margin: 0 0 .25rem 0;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--text);
+  }
+  
+  .meal__desc{
+    margin: 0 0 .75rem 0;
+    font-style: italic;
+    color: var(--muted);
+  }
+  
+  .meal__price{
+    color: var(--brand);
+    font-weight: 800;
+    font-size: 1.35rem;
+  }
+  
+  /* destra */
+  .meal__right{
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    white-space: nowrap;
+  }
+  
+  .meal__amountLbl{
+    font-weight: 700;
+    color: var(--text);
+  }
+  
+  .meal__amountInput{
+    width: 3.25rem;
+    padding: .35rem .4rem;
+    border: 1px solid #d5d5d5;
+    border-radius: 6px;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  /* bottoni */
+  .btn{
+    border: 0;
+    cursor: pointer;
+    border-radius: 9999px;
+    padding: .7rem 1.15rem;
+    font-weight: 800;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+    transition: transform .05s ease, filter .15s ease;
+  }
+  
+  .btn:active{ transform: translateY(1px); }
+  
+  .btn--add{
+    background: var(--brand);
+    color: #fff;
+  }
+  
+  .btn--add:hover{ filter: brightness(1.05); }
+  
+  .meals__footer{
+    padding: 1.25rem 1.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn--cta{
+    background: var(--brand);
+    color: #fff;
+    padding: .9rem 1.25rem;
+  }
+  
+  /* responsive */
+  @media (max-width: 840px){
+    .meal{
+      align-items: center;
+    }
+    .meal__right{
+      margin-left: auto;
+    }
+  }
+  
+  @media (max-width: 600px){
+    .meal{
+      flex-direction: column;
+      align-items: stretch;
+      gap: .75rem;
+    }
+    .meal__right{
+      justify-content: flex-end;
+    }
+  }
+  
