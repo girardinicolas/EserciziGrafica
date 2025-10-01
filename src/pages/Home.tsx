@@ -1,12 +1,9 @@
-import LoginForm from "../components/LoginForm";
+import "../index.css";
 
 
 function Home() {
     return (
-      <div className="home-container">
-        <h1>Benvenuto nella Home</h1>
-        <LoginForm />
-      </div>
+        <p>Home Page</p>
     );
   }
   

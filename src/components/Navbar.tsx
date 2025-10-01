@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useUser } from "./UserContext";
 import "./Navbar.css";
 
 interface NavbarProps {
@@ -9,6 +10,20 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ title, cartCount, onCartClick }) => {
+  const navigate = useNavigate();
+  const { user, logout } = useUser();
+  const userSection = user ? (
+    <div className="user-greeting">
+      Ciao, {user.name}{" "}
+      <button onClick={logout} className="logout-button">
+        Logout
+      </button>
+    </div>
+  ) : (
+    <button onClick={() => navigate("/login")} className="login-button">
+      Accedi
+    </button>
+  );
   return (
     <nav className="navbar">
       <h1 className="navbar-title">{title}</h1>
@@ -23,11 +38,13 @@ const Navbar: React.FC<NavbarProps> = ({ title, cartCount, onCartClick }) => {
           Profile
         </NavLink>
       </div>
+
       <button className="cart-button" onClick={onCartClick} aria-label="Carrello">
         <span className="cart-icon">🛒</span>
         <span className="cart-text">Your Cart</span>
         {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
       </button>
+      {userSection}
     </nav>
   );
 };

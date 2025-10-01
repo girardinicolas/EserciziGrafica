@@ -1,11 +1,15 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+ 
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Card from "./components/Card";
 import Hero from "./components/Hero";
 import { CartProvider, useCart } from "./components/CartContext";
-import Meals from "./components/Meals";
+// import Meals from "./components/Meals";
 import CartModal from "./components/CartModal";
 import AppRouter from "./components/AppRouter";
+import { UserProvider } from "./components/UserContext";
+ 
 
 function AppContent() {
   const { openCart, totalCount } = useCart();
@@ -18,8 +22,12 @@ function AppContent() {
         description1="Choose your favourite meal from our broad selection..."
         description2="All our meals are cooked with high-quality ingredients..."
       />
-      <Navbar title="React Meal" cartCount={totalCount} onCartClick={openCart} />
-      <Meals />
+      <Navbar
+        title="React Meal"
+        cartCount={totalCount}
+        onCartClick={openCart}
+      />
+
       <AppRouter />
       <CartModal />
     </>
@@ -28,11 +36,13 @@ function AppContent() {
 
 function App() {
   return (
-    <CartProvider>
-      <BrowserRouter>
-        <AppContent />
-      </BrowserRouter>
-    </CartProvider>
+    <UserProvider>
+      <CartProvider>
+        <BrowserRouter>
+          <AppContent />
+        </BrowserRouter>
+      </CartProvider>
+    </UserProvider>
   );
 }
 
