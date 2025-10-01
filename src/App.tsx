@@ -1,16 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Merch from "./pages/Merch";
-import Profile from "./pages/Profile";
 import Card from "./components/Card";
 import Hero from "./components/Hero";
 import { CartProvider, useCart } from "./components/CartContext";
 import Meals from "./components/Meals";
 import CartModal from "./components/CartModal";
+import AppRouter from "./components/AppRouter";
 
 function AppContent() {
-  const { isOpen, openCart, totalCount } = useCart();
+  const { openCart, totalCount } = useCart();
 
   return (
     <>
@@ -22,11 +20,7 @@ function AppContent() {
       />
       <Navbar title="React Meal" cartCount={totalCount} onCartClick={openCart} />
       <Meals />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/merch" element={<Merch />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
+      <AppRouter />
       <CartModal />
     </>
   );

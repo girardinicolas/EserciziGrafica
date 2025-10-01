@@ -1,0 +1,24 @@
+.product-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .product-title {
+    font-size: 2rem;
+    color: #343a40;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .product-description {
+    font-size: 1.125rem;
+    color: #495057;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
