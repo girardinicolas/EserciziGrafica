@@ -1,0 +1,48 @@
+.news-page {
+  padding: 16px;
+}
+
+.news-card {
+  margin: 24px auto;
+  max-width: 480px;
+  padding: 24px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.news-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.news-form {
+  display: grid;
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 4px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.message {
+  margin-top: 12px;
+}
+
+.message.error {
+  color: #d00;
+}
+
+.message.success {
+  color: #0a0;
+}
+
+

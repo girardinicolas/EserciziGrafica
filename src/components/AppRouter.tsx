@@ -6,6 +6,8 @@ import Login from "../pages/Login";
 import Profile from "../pages/Profile";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
+import News from "../pages/News";
+import Products from "../pages/Products";
 
 
 function AppRouter() {
@@ -13,6 +15,8 @@ function AppRouter() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/merch" element={<Merch />} />
+      <Route path="/news" element={<News />} />
+      <Route path="/products" element={<Products />} />
       <Route
         path="/login"
         element={

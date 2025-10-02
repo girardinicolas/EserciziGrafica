@@ -37,6 +37,12 @@ const Navbar: React.FC<NavbarProps> = ({ title, cartCount, onCartClick }) => {
         <NavLink to="/profile" className={({ isActive }) => (isActive ? "active" : "")}>
           Profile
         </NavLink>
+        <NavLink to="/news" className={({ isActive }) => (isActive ? "active" : "")}>
+          News
+        </NavLink>
+        <NavLink to="/products" className={({ isActive }) => (isActive ? "active" : "")}>
+          Products
+        </NavLink>
       </div>
 
       <button className="cart-button" onClick={onCartClick} aria-label="Carrello">

@@ -8,6 +8,10 @@ html, body, #root {
 }
 
 body { background: #2b2b2b}
+/* Keep scrollbar space reserved to avoid layout shift when navigating */
+html { overflow-y: scroll; }
+/* Offset for fixed navbar height to prevent layout shift/overlap */
+body { padding-top: 60px; }
 
 .home-container {
     max-width: 600px;

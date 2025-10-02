@@ -1,0 +1,62 @@
+.products-page {
+  padding: 16px;
+}
+
+.products-card {
+  margin: 24px auto;
+  max-width: 640px;
+  padding: 24px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.products-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.products-subtitle {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #555;
+}
+
+.products-form {
+  display: grid;
+  gap: 12px;
+  max-width: 480px;
+}
+
+.field {
+  display: grid;
+  gap: 4px;
+}
+
+.message {
+  margin-top: 12px;
+}
+
+.message.error {
+  color: #d00;
+}
+
+.message.success {
+  color: #0a0;
+}
+
+.products-list {
+  margin-top: 24px;
+}
+
+.products-list ul {
+  padding-left: 16px;
+  margin: 8px 0 0 0;
+}
+
+.products-list li {
+  margin: 4px 0;
+}
+
+
